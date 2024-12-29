@@ -1,0 +1,117 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block contents %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VRAI Technology</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-extrabold text-blue-600">VRAI Technology</a>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#features" class="text-gray-700 hover:text-blue-600">Features</a></li>
+          <li><a href="#process" class="text-gray-700 hover:text-blue-600">How It Works</a></li>
+          <li><a href="#analysis" class="text-gray-700 hover:text-blue-600">Analysis</a></li>
+          <li><a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+    <div class="container mx-auto px-4 py-20 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">Revolutionize Your Retail with AI</h1>
+      <p class="text-lg md:text-2xl mb-6">
+        VRAI Technology uses AI-powered cameras to track, manage, and analyze product movements in real-time.
+      </p>
+      <a href="#features" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold shadow-md hover:bg-gray-100">Explore Features</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Key Features</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+          <div class="text-indigo-600 text-4xl mb-4">📷</div>
+          <h3 class="text-xl font-bold mb-2">Camera Integration</h3>
+          <p class="text-gray-600">Real-time capture of product images to update the database instantly.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+          <div class="text-indigo-600 text-4xl mb-4">🛒</div>
+          <h3 class="text-xl font-bold mb-2">Inventory Tracking</h3>
+          <p class="text-gray-600">Monitor what’s sold and track inventory status automatically.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+          <div class="text-indigo-600 text-4xl mb-4">📊</div>
+          <h3 class="text-xl font-bold mb-2">Automated Analysis</h3>
+          <p class="text-gray-600">Get detailed sales trends and insights without manual effort.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="process" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">How It Works</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="bg-blue-500 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">1</div>
+          <h3 class="text-xl font-bold mb-2">Capture</h3>
+          <p class="text-gray-600">The system captures product details using cameras.</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-indigo-500 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">2</div>
+          <h3 class="text-xl font-bold mb-2">Database Update</h3>
+          <p class="text-gray-600">Captured data is automatically stored in the database.</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-purple-500 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">3</div>
+          <h3 class="text-xl font-bold mb-2">Analyze</h3>
+          <p class="text-gray-600">Generate reports on sales, inventory, and trends.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Analysis Section -->
+  <section id="analysis" class="bg-gray-50 py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Automated Analysis</h2>
+      <p class="text-gray-600 mb-8">
+        Our advanced AI algorithms provide detailed analytics on product movement, inventory levels, and revenue.
+      </p>
+      <img src="https://via.placeholder.com/800x400" alt="Analysis Chart" class="rounded-lg shadow-lg mx-auto">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-blue-600 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+      <p class="text-lg mb-6">Have questions? We’d love to hear from you!</p>
+      <a href="mailto:info@vraitech.com" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold shadow-md hover:bg-gray-100">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2024 VRAI Technology. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+{% endblock %}

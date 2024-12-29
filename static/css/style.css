@@ -1,0 +1,388 @@
+
+/* General reset and font styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Container for centralizing content */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+/* Header styles */
+.header {
+    background-color: transparent; /* Always transparent */
+    color: white; /* Default text color */
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow for visibility */
+    transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+.header .nav ul li a {
+    transition: color 0.3s ease; /* Smooth link color transition */
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover,
+.nav ul li a:focus {
+    color:#3498db;
+    outline: 2px solid#3498db;
+    outline-offset: 4px;
+}
+
+/* Hero section styles */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    text-align: center;
+    color: white; /* Ensure the text color is readable on the background */
+}
+
+.slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Set lower than .text-overlay */
+}
+
+.slideshow .slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the section without stretching */
+    display: none; /* Hide images initially, JavaScript will handle the slide change */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%; /* Positions the text in the vertical center */
+    left: 50%; /* Positions the text in the horizontal center */
+    transform: translate(-50%, -50%); /* Centers the text perfectly */
+    z-index: 1; /* Ensures the text is in front of the images */
+    padding: 0 20px; /* Optional: Add some padding for responsiveness */
+}
+
+.text-overlay h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.text-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    z-index: 10; /* Higher than background or other elements */
+
+}
+
+.text-overlay .btn {
+    background: linear-gradient(135deg, #1a2a6c, #2c1e1e, #1a2a6c);
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 20; /* Higher than background or other elements */
+
+}
+
+.text-overlay .btn:hover,
+.text-overlay .btn:focus {
+    background-color: #3498db;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .text-overlay h2 {
+        font-size: 2rem;
+    }
+
+    .text-overlay p {
+        font-size: 1rem;
+    }
+
+    .text-overlay .btn {
+        padding: 8px 20px;
+    }
+}
+
+
+/* About Us Section */
+.about {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+.services {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+
+.service-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-decoration: none; /* Removes underline */
+
+}
+
+.service-card a {
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Inherits the color from the parent */
+}
+
+.service-card a:hover {
+    color: #224784; /* Optional: change color on hover */
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact button {
+    background: linear-gradient(135deg, #1a2a6c, #2c1e1e,  #1a2a6c);
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact button:hover,
+.contact button:focus {
+    background-color: #3498db;
+    transform: scale(1.05);
+}
+
+/* Footer Styling with Advanced Colors */
+.footer {
+    background: linear-gradient(135deg, #1a2a6c, #2c1e1e,  #1a2a6c);
+    color: #ecf0f1;
+    padding: 40px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo h2 {
+    font-size: 24px;
+    color: #ecf0f1;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.footer-links, .footer-contact, .footer-social {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-links h3, .footer-contact h3, .footer-social h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ecf0f1;
+    font-weight: bold;
+}
+
+.footer-links ul, .footer-contact ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li, .footer-contact ul li, .footer-social ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a, .footer-social ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links ul li a:hover,
+.footer-social ul li a:hover {
+    color: #ecf0f1;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.footer-social ul li a i {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social ul li a:hover i {
+    transform: translateX(5px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footer-bottom p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo, .footer-links, .footer-contact, .footer-social {
+        flex: none;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .service-card {
+        width: 100%;
+    }
+}
+
+
